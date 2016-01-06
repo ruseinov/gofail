@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/garyburd/redigo/internal"
 	"github.com/garyburd/redigo/redis"
 
 	"fmt"
@@ -68,5 +67,4 @@ func (r *Redis) Del(key string) error {
 func main() {
 	redis := InitRedis("blah")
 	redis.Del("das")
-	fmt.Println(internal.WatchState)
 }
